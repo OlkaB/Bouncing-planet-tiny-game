@@ -1,0 +1,92 @@
+/* 
+font-family: 'Raleway', sans-serif; 
+font-family: 'Open Sans Condensed', sans-serif;
+*/
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
+  color: white;
+  background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+/* -------------LEFT INTRO PANE (UPPER PART)---------------- */
+
+h2 {
+  font-size: 28px;
+}
+
+/* -------------LEFT SCORE TABLE (BOTTOM PART)---------------- */
+.scoreTable {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+
+.scoreTable p {
+  margin-top: 30px;
+  padding-left: 3px;
+  font-size: 25px;
+}
+
+button {
+  min-width: 90px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 5px;
+  background-color: black;
+  cursor: pointer;
+  display: inherit;
+}
+
+button:hover {
+  color: #b3ecff;
+}
+
+button:active {
+  color: white;
+  box-shadow: inset 2px 2px 4px 0 rgba(255, 255, 255, .3);
+}
+
+
+/* -------------GAME AREA ---------------- */
+
+#feedback {
+  font-size: 22px;
+  margin-top: 200px;
+  display: none;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  from {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;}
+  to {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;}
+}
+
+#planet {
+  display: none;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50px;
+  box-shadow: 0 0 10px 2px white;
+  background: radial-gradient(circle at 100% 50%, transparent 20%, rgba(255, 255, 255, .3) 21%, rgba(255, 255, 255, .3) 34%, transparent 35%, transparent), radial-gradient(circle at 0% 50%, transparent 20%, rgba(255, 255, 255, .3) 21%, rgba(255, 255, 255, .3) 34%, transparent 35%, transparent) 0 -50px;
+  background-color: slategray;
+  background-size: 75px 100px;
+  
+  animation: bouncingPlanet infinite;
+  animation-duration: 11s;
+}
+
+@keyframes bouncingPlanet {
+    0%   {margin-top: 0; animation-timing-function: ease-in;}
+    45%  {height: 100px; width: 100px;}
+    50%  {margin-top: 450px; width: 110px; height: 90px; border-radius: 55px / 45px; animation-timing-function: ease-out;}
+    100% {margin-top: 0; animation-timing-function: ease-out;}
+}
